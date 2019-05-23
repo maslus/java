@@ -4,12 +4,12 @@ public class Cat extends Animal {
 
     public Cat() {
         super();
-        type = "Cat";
+        type = "кот";
     }
 
     public Cat(String name) {
         super(name);
-        type = "Cat";
+        type = "кот";
     }
 
     @Override

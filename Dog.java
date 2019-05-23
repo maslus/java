@@ -2,20 +2,19 @@ package lesson6.HomeClass06;
 
 public class Dog extends Animal {
 
-    public Dog(){
+    public Dog() {
         super();
         type = "Dog";
     }
 
     public Dog(String name) {
         super(name);
-        type="Dog";
+        type = "Dog";
     }
 
     public Dog(String name, int maxlength) {
         super(name);
         type = "Dog";
-        this.maxlength = maxlength;
     }
 
     @Override
@@ -30,7 +29,7 @@ public class Dog extends Animal {
     }
 
     @Override
-    public void jump (double height,double maxheight){
+    public void jump(double height, double maxheight) {
         if (height <= maxheight) {
             System.out.println(type + " " + name + " перепрыгивает через препятствие " + height + " метров.");
         } else {
@@ -39,7 +38,7 @@ public class Dog extends Animal {
     }
 
     @Override
-    public void swim (int distance){
+    public void swim(int distance) {
         int maxdistance = 10;
         if (distance <= maxdistance) {
             System.out.println(type + " " + name + " проплывает " + distance + " метров.");

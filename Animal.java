@@ -43,6 +43,7 @@ public class Animal {
     }
 
     public boolean run(int length, int maxlength) {
+
         if (length <= maxlength) {
 //            System.out.println(type + " " + name + " бежит " + length + " метров.");
             return true;
