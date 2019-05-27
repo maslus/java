@@ -8,8 +8,7 @@ public class Cat {
 //    public Cat(String name) {
 //        this.name = name;
 //    }
-
-
+    
     public Cat(String name, int hunger) {
         this.name = name;
         this.hunger = hunger;
