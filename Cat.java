@@ -1,39 +1,44 @@
-package lesson6.HomeClass06;
+package lesson7.cats;
 
-public class Cat extends Animal {
+public class Cat {
+    private String name;
+    private int hunger;
 
-    public Cat() {
-        super();
-        type = "кот";
+
+//    public Cat(String name) {
+//        this.name = name;
+//    }
+
+
+    public Cat(String name, int hunger) {
+        this.name = name;
+        this.hunger = hunger;
     }
 
-    public Cat(String name) {
-        super(name);
-        type = "кот";
+    public String getName() {
+        return name;
     }
 
-    @Override
-    public boolean run(int length, int maxlength) {
-        if (length <= maxlength) {
-//            System.out.println(type + " " + name + " бежит " + length + " метров.");
-            return true;
+    public void eat(Plate plate) {
+        if (plate.getFood() >= hunger) {
+            plate.decreaseFood(hunger);
+            hunger = 0;
+            System.out.println(name + " eat...");
         } else {
-//            System.out.println(type + " " + " не может пробежать более " + maxlength + " метров.");
+            System.out.println("В тарелке недостаточно корма для " + name);
+        }
+    }
+
+    public boolean satiety(Cat cat) {
+        if (cat.hunger > 0) {
             return false;
-        }
-    }
-
-    @Override
-    public void jump (double height, double maxheight){
-        if (height <= maxheight) {
-            System.out.println(type + " " + name + " перепрыгивает через препятствие " + height + " метров.");
         } else {
-            System.out.println(type + " " + " не может подпрыгнуть выше " + maxheight + " метров.");
+            return true;
         }
     }
 
-    @Override
-    public void swim (int distance) {
-        System.out.println("Ни один " + type + " не умеет плавать.");
-    }
+//    public void fear(Dog dog) {
+//        System.out.println(name + " fear..." + dog.getName());
+//    }
+
 }
